@@ -100,12 +100,27 @@ paper, this software release, and DiscoveryBench when using the bundled benchmar
 - Report vectors, weights, uncertainty, exclusions and failed harmonisation.
 - Use final expert, ethical, feasibility and empirical review after DPT screening.
 
-## References
+---
 
-If you use this toolkit in research, please consult the following works:
+## Scientific Foundations
 
-1. Akhtar, M. A. K. (2026). *The Mystery of Questions: Why Some Questions Change the World.* Why? Series, Book 5.
+The **Discovery Plane Theory (DPT) Toolkit** implements the concepts, algorithms, and evaluation workflow developed across the following works. Users are encouraged to consult these publications for the complete theoretical foundations, mathematical proofs, benchmark methodology, and conceptual background.
 
-2. Akhtar, M. A. K. (2026). *Discovery Plane Theory: A Formal and Reproducible Framework for Scientific Question Formation, Discovery Complexity, and Question Compression.* Zenodo. https://doi.org/10.5281/zenodo.21725071
+### Conceptual Origin
 
-3. Akhtar, M. A. K. (2026). *Evaluating AI-Generated Scientific Questions with Discovery Plane Theory: A Repeated-Measures Computational Benchmark Across Twenty Scientific Fields (Version V1).* Zenodo. https://doi.org/10.5281/zenodo.21738143
+Akhtar, M. A. K. (2026). *The Mystery of Questions: Why Some Questions Change the World.* Why? Series, Book 5.  
+https://a.co/d/09f5Hi4W
+
+### Formal Theory
+
+Akhtar, M. A. K. (2026). *Discovery Plane Theory: A Formal and Reproducible Framework for Scientific Question Formation, Discovery Complexity, and Question Compression.* Zenodo.  
+https://doi.org/10.5281/zenodo.21725071
+
+### Computational Benchmark
+
+Akhtar, M. A. K. (2026). *Evaluating AI-Generated Scientific Questions with Discovery Plane Theory: A Repeated-Measures Computational Benchmark Across Twenty Scientific Fields (Version V1).* Zenodo.  
+https://doi.org/10.5281/zenodo.21738143
+
+If you use this software in academic research, please cite the relevant DPT publications in addition to the software repository.
+
+---
