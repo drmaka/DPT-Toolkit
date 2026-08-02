@@ -1,0 +1,122 @@
+project:
+  title: Detection and Characterisation of Exoplanets
+  domain: astronomy
+  version: '1.0'
+reality_space:
+- Exoplanets can be inferred through transit, radial-velocity, imaging, and timing observations.
+- Signals are weak and may be confused with stellar activity or instrumental noise.
+- Observing time on major telescopes is limited.
+- Different methods provide complementary constraints.
+- Atmospheric characterisation requires high-quality spectra.
+- Candidate confirmation often needs observations across instruments.
+background_knowledge:
+- Astrophysics
+- Signal processing
+- Bayesian inference
+- Spectroscopy
+- Telescope instrumentation
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which noise-removal method most improves transit detection in a selected survey?
+  dc_components:
+    time: 2
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 4
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 28
+- id: q2
+  text: Can transit and radial-velocity data jointly improve planet-mass and orbit estimates?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 18
+- id: q3
+  text: Can multi-instrument photometric, spectroscopic, and dynamical evidence jointly detect and characterise
+    small potentially habitable exoplanets?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 6
+- id: q4
+  text: Can current telescopes conclusively identify life on every Earth-like exoplanet?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 22
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.85
+- id: q3
+  time: 2030
+  dc: 0.833
+  qc: 0.9

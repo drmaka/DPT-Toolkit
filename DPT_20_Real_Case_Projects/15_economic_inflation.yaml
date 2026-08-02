@@ -1,0 +1,122 @@
+project:
+  title: Inflation Dynamics and Policy Response
+  domain: economics
+  version: '1.0'
+reality_space:
+- Inflation can arise from demand, supply, expectations, exchange rates, and policy.
+- Price changes differ across sectors and household groups.
+- Official indices aggregate heterogeneous consumption patterns.
+- Monetary policy operates with uncertain lags.
+- Global commodity shocks can affect domestic prices.
+- Policy responses involve trade-offs among inflation, growth, and employment.
+background_knowledge:
+- Macroeconomics
+- Time-series econometrics
+- Monetary policy
+- Input-output analysis
+- Household expenditure surveys
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which sectors contributed most to recent changes in consumer-price inflation?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 1
+    compute: 3
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: How do exchange-rate and commodity-price shocks pass through to domestic inflation?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 19
+- id: q3
+  text: Can sectoral prices, expectations, supply networks, fiscal conditions, and monetary policy jointly explain
+    inflation persistence and distributional effects?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 3
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can a single policy instrument permanently control inflation without affecting growth or employment?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 22
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 0.958
+  qc: 0.825
+- id: q3
+  time: 2028
+  dc: 0.833
+  qc: 0.875

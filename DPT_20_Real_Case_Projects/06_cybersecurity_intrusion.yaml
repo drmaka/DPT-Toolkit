@@ -1,0 +1,122 @@
+project:
+  title: Adaptive Cyber-Intrusion Detection
+  domain: cybersecurity
+  version: '1.0'
+reality_space:
+- Enterprise networks generate large volumes of security telemetry.
+- Attack techniques evolve and may imitate legitimate behaviour.
+- Labelled attack data are incomplete and quickly become outdated.
+- Detection systems must balance sensitivity with alert fatigue.
+- Encrypted traffic limits direct content inspection.
+- Human analysts need interpretable evidence for incident response.
+background_knowledge:
+- Network security
+- Threat intelligence
+- Machine learning
+- Anomaly detection
+- Digital forensics
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which network indicators most reliably distinguish known attacks from normal traffic?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 3
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: Can self-supervised learning improve detection of previously unseen attacks?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 20
+- id: q3
+  text: Can network, endpoint, identity, and threat-intelligence evidence support adaptive and explainable intrusion
+    detection with controlled false alerts?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 3
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can an autonomous security system replace human analysts in all incident-response decisions?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 21
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 0.958
+  qc: 0.825
+- id: q3
+  time: 2028
+  dc: 0.833
+  qc: 0.875

@@ -1,0 +1,122 @@
+project:
+  title: Public-Health Outbreak Early Warning
+  domain: public-health
+  version: '1.0'
+reality_space:
+- Infectious-disease outbreaks can grow before laboratory confirmation is complete.
+- Clinical reports, pharmacy sales, mobility, wastewater, and search behaviour provide indirect signals.
+- Signals differ in timeliness, coverage, and reliability.
+- False alarms can consume public-health resources.
+- Data sharing across institutions may be delayed.
+- Interventions must be proportional and ethically justified.
+background_knowledge:
+- Epidemiology
+- Syndromic surveillance
+- Wastewater epidemiology
+- Time-series analysis
+- Public-health ethics
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which surveillance signals provide the earliest indication of rising infection levels?
+  dc_components:
+    time: 2
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 3
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 28
+- id: q2
+  text: Can wastewater and clinical data jointly improve outbreak detection?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 19
+- id: q3
+  text: Can multi-source surveillance provide calibrated early warnings and identify proportionate intervention
+    thresholds?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can automated surveillance eliminate the need for laboratory confirmation?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 22
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.825
+- id: q3
+  time: 2028
+  dc: 0.833
+  qc: 0.875

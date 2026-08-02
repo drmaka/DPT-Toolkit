@@ -1,0 +1,122 @@
+project:
+  title: Urban Traffic Congestion Management
+  domain: transportation
+  version: '1.0'
+reality_space:
+- Traffic demand varies by time, location, weather, and events.
+- Road networks contain recurring bottlenecks.
+- Signal timing influences queue formation.
+- Public transport and parking policies affect travel behaviour.
+- Navigation apps may redistribute congestion.
+- Authorities require interventions that are fair and practical.
+background_knowledge:
+- Traffic engineering
+- Operations research
+- Urban planning
+- Simulation
+- Intelligent transport systems
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which intersections contribute most to recurring congestion?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: Can adaptive signal timing reduce average delay during peak periods?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 19
+- id: q3
+  text: Can traffic signals, public transport, parking, and traveller information be jointly coordinated to reduce
+    congestion and emissions?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can road expansion alone permanently eliminate urban congestion?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 3
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 23
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.825
+- id: q3
+  time: 2029
+  dc: 0.833
+  qc: 0.875

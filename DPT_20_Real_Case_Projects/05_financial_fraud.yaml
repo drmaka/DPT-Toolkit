@@ -1,0 +1,122 @@
+project:
+  title: Explainable Financial-Fraud Detection
+  domain: finance
+  version: '1.0'
+reality_space:
+- Fraudulent transactions are rare relative to legitimate transactions.
+- Fraud patterns change as detection systems evolve.
+- Transaction data contain temporal, behavioural, and network information.
+- False positives can inconvenience customers and increase investigation costs.
+- Financial institutions must satisfy privacy and regulatory requirements.
+- Model explanations are important for human review.
+background_knowledge:
+- Fraud analytics
+- Anomaly detection
+- Graph machine learning
+- Risk management
+- Financial regulation
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which transaction features are most associated with confirmed fraud?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 30
+- id: q2
+  text: Can temporal and behavioural models reduce false-positive fraud alerts?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 20
+- id: q3
+  text: Can graph, temporal, and behavioural evidence be combined into an explainable fraud-screening system robust
+    to changing fraud patterns?
+  dc_components:
+    time: 3
+    concept: 4
+    search: 4
+    experiment: 3
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 8
+- id: q4
+  text: Can fraud be detected perfectly without delaying legitimate transactions?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 22
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 0.958
+  qc: 0.8
+- id: q3
+  time: 2027
+  dc: 0.833
+  qc: 0.85

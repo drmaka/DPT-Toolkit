@@ -1,0 +1,122 @@
+project:
+  title: Judicial Case-Backlog Reduction
+  domain: law-and-public-policy
+  version: '1.0'
+reality_space:
+- Courts face differences in filing volumes, case complexity, staffing, and procedures.
+- Delay affects litigants, public trust, and economic activity.
+- Case records may be incomplete or inconsistently coded.
+- Some matters require urgent handling while others permit alternative resolution.
+- Judicial independence must be preserved.
+- Technology can assist administration but cannot replace legal judgment.
+background_knowledge:
+- Court administration
+- Public policy
+- Operations research
+- Legal informatics
+- Access to justice
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which case categories contribute most to pending-case growth?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: Can scheduling and case-flow management reduce median disposal time?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 3
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 20
+- id: q3
+  text: Can staffing, scheduling, digital filing, triage, and alternative dispute resolution be jointly designed
+    to reduce delay while preserving fairness?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can automated adjudication eliminate court backlogs without affecting justice quality?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 23
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.825
+- id: q3
+  time: 2029
+  dc: 0.833
+  qc: 0.875

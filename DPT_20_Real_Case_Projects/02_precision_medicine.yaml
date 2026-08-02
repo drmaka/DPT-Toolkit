@@ -1,0 +1,121 @@
+project:
+  title: Precision Medicine for Treatment Response
+  domain: medicine
+  version: '1.0'
+reality_space:
+- Patients with the same diagnosis can respond differently to the same treatment.
+- Clinical records contain demographic, laboratory, imaging, and medication information.
+- Genomic and molecular data are not routinely available for every patient.
+- Treatment decisions must satisfy safety, privacy, and ethical requirements.
+- Hospital data may be incomplete, heterogeneous, and institution-specific.
+- Prospective validation is required before clinical deployment.
+background_knowledge:
+- Clinical epidemiology
+- Biostatistics
+- Pharmacogenomics
+- Machine learning
+- Research ethics
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which routinely collected clinical variables are associated with treatment response?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 2
+  qc:
+    method: units
+    L_R: 42
+    L_Rq: 30
+- id: q2
+  text: Can clinical and laboratory data predict treatment non-response before therapy begins?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 3
+    coordination: 3
+  qc:
+    method: units
+    L_R: 42
+    L_Rq: 18
+- id: q3
+  text: Does combining clinical, genomic, and imaging information improve treatment-response prediction across hospitals?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 42
+    L_Rq: 7
+- id: q4
+  text: Can an automated precision-medicine system safely select treatment without clinician oversight?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 42
+    L_Rq: 20
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.833
+- id: q3
+  time: 2029
+  dc: 0.833
+  qc: 0.881

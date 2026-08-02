@@ -1,0 +1,122 @@
+project:
+  title: River Water-Quality Monitoring
+  domain: environmental-engineering
+  version: '1.0'
+reality_space:
+- River water quality changes with rainfall, discharge, agriculture, industry, and sewage.
+- Laboratory testing is accurate but infrequent.
+- In-situ sensors can provide continuous but noisy measurements.
+- Pollution sources may be diffuse or intermittent.
+- Communities depend on timely warnings.
+- Regulators need evidence linking pollution patterns to possible sources.
+background_knowledge:
+- Hydrology
+- Water chemistry
+- Environmental sensors
+- Source apportionment
+- Environmental regulation
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which water-quality variables best indicate pollution events?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 2
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: Can continuous sensors reliably detect short-lived contamination events?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 3
+    compute: 3
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 20
+- id: q3
+  text: Can hydrological, sensor, laboratory, land-use, and discharge data jointly detect events and attribute likely
+    pollution sources?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 8
+- id: q4
+  text: Can one sensor network identify every pollutant and source without laboratory analysis?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 23
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.8
+- id: q3
+  time: 2028
+  dc: 0.833
+  qc: 0.85

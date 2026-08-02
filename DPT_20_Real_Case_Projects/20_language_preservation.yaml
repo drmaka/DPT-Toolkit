@@ -1,0 +1,122 @@
+project:
+  title: Digital Preservation of Endangered Languages
+  domain: linguistics-and-digital-humanities
+  version: '1.0'
+reality_space:
+- Many endangered languages have few fluent speakers.
+- Existing recordings and texts may be incomplete or inaccessible.
+- Writing systems and orthographic conventions may vary.
+- Language data can contain culturally sensitive knowledge.
+- Automatic speech and language tools perform poorly with limited data.
+- Community ownership and consent are essential.
+background_knowledge:
+- Sociolinguistics
+- Language documentation
+- Speech technology
+- Digital archives
+- Research ethics
+dc_weights:
+  time: 1
+  concept: 1
+  search: 1
+  experiment: 1
+  compute: 1
+  coordination: 1
+thresholds:
+  dc: 0.65
+  qc: 0.65
+budget_beta: 0.8
+utility_lambda: 0.5
+select_top_n: 1
+coordinate_error:
+  dc: 0.05
+  qc: 0.05
+scarcity_thresholds:
+- 0.4
+- 0.7
+sensitivity:
+  thresholds:
+  - 0.6
+  - 0.65
+  - 0.75
+  - 0.8
+  - 0.85
+questions:
+- id: q1
+  text: Which existing language materials can be digitised and catalogued immediately?
+  dc_components:
+    time: 2
+    concept: 2
+    search: 2
+    experiment: 2
+    compute: 2
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 29
+- id: q2
+  text: Can transfer learning improve speech recognition for a low-resource language?
+  dc_components:
+    time: 3
+    concept: 3
+    search: 3
+    experiment: 2
+    compute: 4
+    coordination: 3
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 19
+- id: q3
+  text: Can community-led documentation, archives, speech tools, education, and governance jointly support long-term
+    language revitalisation?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 7
+- id: q4
+  text: Can an AI system preserve a language without continued participation by its speakers?
+  dc_components:
+    time: 4
+    concept: 4
+    search: 4
+    experiment: 4
+    compute: 4
+    coordination: 4
+  qc:
+    method: units
+    L_R: 40
+    L_Rq: 23
+admissibility_edges:
+- - q1
+  - q2
+  - null
+- - q2
+  - q3
+  - null
+- - q2
+  - q4
+  - null
+- - q3
+  - q4
+  - null
+geodesic:
+- q1
+- q4
+dynamic_coordinates:
+- id: q3
+  time: 2026
+  dc: 1.0
+  qc: 0.825
+- id: q3
+  time: 2029
+  dc: 0.833
+  qc: 0.875
