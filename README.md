@@ -99,3 +99,13 @@ paper, this software release, and DiscoveryBench when using the bundled benchmar
 - Freeze anchors and codebooks before held-out outcome testing.
 - Report vectors, weights, uncertainty, exclusions and failed harmonisation.
 - Use final expert, ethical, feasibility and empirical review after DPT screening.
+
+## References
+
+If you use this toolkit in research, please consult the following works:
+
+1. Akhtar, M. A. K. (2026). *The Mystery of Questions: Why Some Questions Change the World.* Why? Series, Book 5.
+
+2. Akhtar, M. A. K. (2026). *Discovery Plane Theory: A Formal and Reproducible Framework for Scientific Question Formation, Discovery Complexity, and Question Compression.* Zenodo. https://doi.org/10.5281/zenodo.21725071
+
+3. Akhtar, M. A. K. (2026). *Evaluating AI-Generated Scientific Questions with Discovery Plane Theory: A Repeated-Measures Computational Benchmark Across Twenty Scientific Fields (Version V1).* Zenodo. https://doi.org/10.5281/zenodo.21738143
