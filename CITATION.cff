@@ -1,16 +1,68 @@
 cff-version: 1.2.0
-title: DPT Toolkit: Auditable Software for Discovery Plane Theory
-message: "If you use this software, please cite the software and the associated DPT paper."
+
+title: "DPT Toolkit: An Open-Source Toolkit for Discovery Plane Theory"
+
+message: >
+  If you use this software in academic research, please cite both the
+  DPT Toolkit and the associated Discovery Plane Theory publications.
+
 type: software
+
 authors:
   - family-names: Akhtar
     given-names: Mohammad Amir Khusru
-version: 1.0.0
-date-released: 2026-08-02
+
+version: "1.0.0"
+
+date-released: "2026-08-02"
+
 license: Apache-2.0
+
 repository-code: "https://github.com/USERNAME/DPT-Toolkit"
+
+abstract: >
+  DPT Toolkit is an open-source implementation of Discovery Plane Theory (DPT),
+  providing a complete workflow for transparent and reproducible evaluation of
+  scientific research questions, including Discovery Complexity (DC), Question
+  Compression (QC), Discovery Frontier extraction, dominance analysis, budget
+  constraints, utility optimisation, sensitivity analysis, dynamic coordinates,
+  reliability assessment, and visualisation.
+
 keywords:
   - Discovery Plane Theory
   - Discovery Complexity
   - Question Compression
-  - research question evaluation
+  - Research Question Evaluation
+  - Research Methodology
+  - Scientific Discovery
+  - Decision Science
+  - Research Screening
+  - Research Planning
+  - Open Science
+
+references:
+
+  - type: book
+    authors:
+      - family-names: Akhtar
+        given-names: Mohammad Amir Khusru
+    title: "The Mystery of Questions: Why Some Questions Change the World"
+    year: 2026
+    publisher: Amazon
+    url: "https://a.co/d/09f5Hi4W"
+
+  - type: article
+    authors:
+      - family-names: Akhtar
+        given-names: Mohammad Amir Khusru
+    title: "Discovery Plane Theory: A Formal and Reproducible Framework for Scientific Question Formation, Discovery Complexity, and Question Compression"
+    year: 2026
+    doi: "10.5281/zenodo.21725071"
+
+  - type: article
+    authors:
+      - family-names: Akhtar
+        given-names: Mohammad Amir Khusru
+    title: "Evaluating AI-Generated Scientific Questions with Discovery Plane Theory: A Repeated-Measures Computational Benchmark Across Twenty Scientific Fields (Version V1)"
+    year: 2026
+    doi: "10.5281/zenodo.21738143"
