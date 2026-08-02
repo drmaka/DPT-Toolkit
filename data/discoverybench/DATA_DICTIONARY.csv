@@ -1,0 +1,63 @@
+variable,role
+candidate_id,Bibliographic metadata
+requested_domain,Bibliographic metadata
+actual_openalex_field,Bibliographic metadata
+field_id,Bibliographic metadata
+field_valid,Quality control
+screening_status,Quality control
+openalex_id,Bibliographic metadata
+doi,Bibliographic metadata
+title,Bibliographic metadata
+publication_year,Bibliographic metadata
+publication_date,Bibliographic metadata
+work_type,Bibliographic metadata
+language,Bibliographic metadata
+authors,Bibliographic metadata
+source_title,Bibliographic metadata
+source_type,Bibliographic metadata
+cited_by_count,Bibliographic metadata
+fwci,Bibliographic metadata
+is_retracted,Bibliographic metadata
+is_open_access,Bibliographic metadata
+oa_url,Bibliographic metadata
+primary_topic,Bibliographic metadata
+subfield,Bibliographic metadata
+topics_top5,Bibliographic metadata
+keywords_top8,Bibliographic metadata
+abstract_available,Bibliographic metadata
+landmark_source,Human/model coding or derived Discovery Plane variable
+case_type,Human/model coding or derived Discovery Plane variable
+historical_period,Human/model coding or derived Discovery Plane variable
+discovery_status_label,Human/model coding or derived Discovery Plane variable
+central_scientific_question,Human/model coding or derived Discovery Plane variable
+question_reconstruction_evidence,Human/model coding or derived Discovery Plane variable
+primary_source_url,Human/model coding or derived Discovery Plane variable
+coder_1_id,Human/model coding or derived Discovery Plane variable
+coder_2_id,Human/model coding or derived Discovery Plane variable
+adjudicator_id,Human/model coding or derived Discovery Plane variable
+C_time,Human/model coding or derived Discovery Plane variable
+C_concept,Human/model coding or derived Discovery Plane variable
+C_search,Human/model coding or derived Discovery Plane variable
+C_experiment,Human/model coding or derived Discovery Plane variable
+C_compute,Human/model coding or derived Discovery Plane variable
+C_coordination,Human/model coding or derived Discovery Plane variable
+cost_weight_scheme,Human/model coding or derived Discovery Plane variable
+DC_raw,Human/model coding or derived Discovery Plane variable
+DC_normalized,Human/model coding or derived Discovery Plane variable
+L_R,Human/model coding or derived Discovery Plane variable
+L_Rq,Human/model coding or derived Discovery Plane variable
+delta_L,Human/model coding or derived Discovery Plane variable
+QC_raw,Human/model coding or derived Discovery Plane variable
+QC_normalized,Human/model coding or derived Discovery Plane variable
+kg_reorganisation_score,Human/model coding or derived Discovery Plane variable
+human_compression_rating,Human/model coding or derived Discovery Plane variable
+compression_explanatory,Human/model coding or derived Discovery Plane variable
+procedure_description,Human/model coding or derived Discovery Plane variable
+best_known_procedure,Human/model coding or derived Discovery Plane variable
+uncertainty_low,Human/model coding or derived Discovery Plane variable
+uncertainty_high,Human/model coding or derived Discovery Plane variable
+coding_confidence,Human/model coding or derived Discovery Plane variable
+frontier_member,Human/model coding or derived Discovery Plane variable
+partition,Human/model coding or derived Discovery Plane variable
+exclusion_reason,Quality control
+notes,Human/model coding or derived Discovery Plane variable

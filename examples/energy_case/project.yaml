@@ -1,0 +1,61 @@
+project:
+  title: University Energy Research Question Screening
+  domain: engineering
+  version: "1.0"
+reality_space:
+  - Electricity bills are increasing.
+  - Classrooms remain powered when unoccupied.
+  - Air-conditioning sometimes operates unnecessarily.
+  - Solar production is daylight-limited.
+  - Battery storage is costly.
+  - Peak demand occurs in the afternoon.
+  - Buildings have different load patterns.
+  - Weather affects cooling demand.
+background_knowledge:
+  - Electrical-energy fundamentals
+  - IoT sensors
+  - Solar-energy systems
+  - Statistical forecasting
+  - University timetables
+
+dc_weights: {time: 1, concept: 1, search: 1, experiment: 1, compute: 1, coordination: 1}
+thresholds: {dc: 0.65, qc: 0.65}
+budget_beta: 0.80
+utility_lambda: 0.50
+select_top_n: 1
+coordinate_error: {dc: 0.05, qc: 0.05}
+scarcity_thresholds: [0.40, 0.70]
+sensitivity:
+  thresholds: [0.60, 0.65, 0.75, 0.80, 0.85]
+questions:
+  - id: q1
+    text: Can replacing conventional bulbs with LED bulbs reduce university electricity consumption?
+    dc_components: {time: 1, concept: 1, search: 1, experiment: 1, compute: 0, coordination: 1}
+    qc: {method: units, L_R: 40, L_Rq: 35}
+  - id: q2
+    text: Can timetable changes reduce the university's peak electricity demand?
+    dc_components: {time: 2, concept: 2, search: 2, experiment: 2, compute: 1, coordination: 3}
+    qc: {method: units, L_R: 40, L_Rq: 25}
+  - id: q3
+    text: Can occupancy, timetable, weather, and solar-generation data be combined to predict and automatically minimise campus electricity demand?
+    procedures:
+      - id: D1
+        components: {time: 4, concept: 3, search: 3, experiment: 3, compute: 4, coordination: 4}
+      - id: D2
+        components: {time: 3, concept: 3, search: 3, experiment: 3, compute: 3, coordination: 3}
+      - id: D3
+        components: {time: 3, concept: 3, search: 3, experiment: 4, compute: 3, coordination: 4}
+    qc: {method: units, L_R: 40, L_Rq: 8}
+  - id: q4
+    text: Can the campus become completely energy-self-sufficient throughout the year without grid electricity?
+    dc_components: {time: 4, concept: 4, search: 4, experiment: 4, compute: 4, coordination: 4}
+    qc: {method: units, L_R: 40, L_Rq: 20}
+admissibility_edges:
+  - [q1, q2, null]
+  - [q2, q3, null]
+  - [q2, q4, null]
+  - [q3, q4, null]
+geodesic: [q1, q4]
+dynamic_coordinates:
+  - {id: q3, time: 2026, dc: 0.750, qc: 0.800}
+  - {id: q3, time: 2027, dc: 0.600, qc: 0.850}

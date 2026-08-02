@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: DPT Toolkit: Auditable Software for Discovery Plane Theory
+message: "If you use this software, please cite the software and the associated DPT paper."
+type: software
+authors:
+  - family-names: Akhtar
+    given-names: Mohammad Amir Khusru
+version: 1.0.0
+date-released: 2026-08-02
+license: Apache-2.0
+repository-code: "https://github.com/USERNAME/DPT-Toolkit"
+keywords:
+  - Discovery Plane Theory
+  - Discovery Complexity
+  - Question Compression
+  - research question evaluation

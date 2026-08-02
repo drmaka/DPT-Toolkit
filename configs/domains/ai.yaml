@@ -1,0 +1,8 @@
+domain: ai
+notes:
+  - Report data provenance, benchmark leakage controls, compute hardware and model/API versions.
+  - Automated scores must retain prompts, model identifiers and uncertainty.
+suggested_evidence:
+  search: candidate hypotheses, papers, architectures or hyperparameter states
+  compute: measured CPU/GPU hours and energy where available
+  coordination: data owners, infrastructure teams and external API providers

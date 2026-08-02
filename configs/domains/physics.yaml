@@ -1,0 +1,6 @@
+domain: physics
+notes:
+  - Separate facility access, instrument construction, collaboration scale and compute burden.
+suggested_evidence:
+  experiment: beamtime, detector/instrument requirements, rare-event observation
+  coordination: collaboration membership and facility governance

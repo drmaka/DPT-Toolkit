@@ -1,0 +1,8 @@
+domain: medicine
+notes:
+  - Ethical approval and participant safety remain separate mandatory reviews.
+  - Recruitment rarity, trial phase, sample handling and site count should be documented.
+suggested_evidence:
+  time: protocol dates and recruitment duration
+  experiment: trial phase, sample rarity, equipment and participant risk
+  coordination: sites, regulators, data-sharing agreements

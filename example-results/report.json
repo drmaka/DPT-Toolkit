@@ -1,0 +1,274 @@
+{
+  "project": {
+    "title": "University Energy Research Question Screening",
+    "domain": "engineering",
+    "version": "1.0"
+  },
+  "methodological_status": "Operational DPT screening under declared conventions; not proof of truth, ethics, discovery, or future impact.",
+  "steps": [
+    {
+      "number": 1,
+      "name": "Declare the Reality Space",
+      "status": "completed"
+    },
+    {
+      "number": 2,
+      "name": "Declare the Background-Knowledge State",
+      "status": "completed"
+    },
+    {
+      "number": 3,
+      "name": "Generate Multiple Candidate Questions",
+      "status": "completed"
+    },
+    {
+      "number": 4,
+      "name": "Declare the Discovery-Cost Functional",
+      "status": "completed"
+    },
+    {
+      "number": 5,
+      "name": "Identify Admissible Procedures and Calculate Discovery Complexity",
+      "status": "completed"
+    },
+    {
+      "number": 6,
+      "name": "Declare the Description-Length Functional",
+      "status": "completed"
+    },
+    {
+      "number": 7,
+      "name": "Transform the Reality Space Through Each Question",
+      "status": "completed"
+    },
+    {
+      "number": 8,
+      "name": "Calculate Signed Representational Change and Question Compression",
+      "status": "completed"
+    },
+    {
+      "number": 9,
+      "name": "Construct the Discovery Coordinates",
+      "status": "completed"
+    },
+    {
+      "number": 10,
+      "name": "Classify the Questions into Discovery Plane Regions",
+      "status": "completed"
+    },
+    {
+      "number": 11,
+      "name": "Verify Existence, Non-Negativity, and Bounds",
+      "status": "completed"
+    },
+    {
+      "number": 12,
+      "name": "Verify Coordinate Uniqueness Under Fixed Conventions",
+      "status": "completed"
+    },
+    {
+      "number": 13,
+      "name": "Verify Compression Monotonicity",
+      "status": "completed"
+    },
+    {
+      "number": 14,
+      "name": "Check Representation-Isomorphism Invariance",
+      "status": "audited/demonstrated"
+    },
+    {
+      "number": 15,
+      "name": "Calculate Dominance",
+      "status": "completed"
+    },
+    {
+      "number": 16,
+      "name": "Extract the Discovery Frontier",
+      "status": "completed"
+    },
+    {
+      "number": 17,
+      "name": "Apply a Research-Budget Constraint",
+      "status": "completed"
+    },
+    {
+      "number": 18,
+      "name": "Demonstrate Expansion of Procedure Sets",
+      "status": "audited/demonstrated"
+    },
+    {
+      "number": 19,
+      "name": "Calculate Weighted Discovery Distance",
+      "status": "completed"
+    },
+    {
+      "number": 20,
+      "name": "Form a Neighbourhood and Calculate Path Length",
+      "status": "completed"
+    },
+    {
+      "number": 21,
+      "name": "Construct an Admissibility Graph and Find a Geodesic",
+      "status": "completed"
+    },
+    {
+      "number": 22,
+      "name": "Calculate Regularised Discovery Utility",
+      "status": "completed"
+    },
+    {
+      "number": 23,
+      "name": "Examine Non-Convexity and the Limitation of Scalarisation",
+      "status": "audited/demonstrated"
+    },
+    {
+      "number": 24,
+      "name": "Conduct Threshold Sensitivity Analysis",
+      "status": "completed"
+    },
+    {
+      "number": 25,
+      "name": "Conduct Weight Sensitivity Analysis",
+      "status": "completed"
+    },
+    {
+      "number": 26,
+      "name": "Apply the Stability Bound Under Coordinate Error",
+      "status": "completed"
+    },
+    {
+      "number": 27,
+      "name": "Construct a Dynamic Coordinate",
+      "status": "completed"
+    },
+    {
+      "number": 28,
+      "name": "Demonstrate Threshold Scarcity",
+      "status": "completed"
+    },
+    {
+      "number": 29,
+      "name": "Relate the Manual Example to the Computational Benchmark",
+      "status": "audited/demonstrated"
+    },
+    {
+      "number": 30,
+      "name": "Make the Final Research-Screening Decision",
+      "status": "completed"
+    }
+  ],
+  "reality_space": [
+    "Electricity bills are increasing.",
+    "Classrooms remain powered when unoccupied.",
+    "Air-conditioning sometimes operates unnecessarily.",
+    "Solar production is daylight-limited.",
+    "Battery storage is costly.",
+    "Peak demand occurs in the afternoon.",
+    "Buildings have different load patterns.",
+    "Weather affects cooling demand."
+  ],
+  "background_knowledge": [
+    "Electrical-energy fundamentals",
+    "IoT sensors",
+    "Solar-energy systems",
+    "Statistical forecasting",
+    "University timetables"
+  ],
+  "coordinates": [
+    {
+      "id": "q1",
+      "text": "Can replacing conventional bulbs with LED bulbs reduce university electricity consumption?",
+      "dc": 0.20833333333333334,
+      "qc": 0.125,
+      "dc_raw": 5.0,
+      "qc_raw": 5.0,
+      "best_procedure": "declared",
+      "region": "I",
+      "frontier": true,
+      "dominated": false,
+      "budget_feasible": true,
+      "utility": 0.02083333333333333
+    },
+    {
+      "id": "q2",
+      "text": "Can timetable changes reduce the university's peak electricity demand?",
+      "dc": 0.5,
+      "qc": 0.375,
+      "dc_raw": 12.0,
+      "qc_raw": 15.0,
+      "best_procedure": "declared",
+      "region": "I",
+      "frontier": true,
+      "dominated": false,
+      "budget_feasible": true,
+      "utility": 0.125
+    },
+    {
+      "id": "q3",
+      "text": "Can occupancy, timetable, weather, and solar-generation data be combined to predict and automatically minimise campus electricity demand?",
+      "dc": 0.75,
+      "qc": 0.8,
+      "dc_raw": 18.0,
+      "qc_raw": 32.0,
+      "best_procedure": "D2",
+      "region": "IV",
+      "frontier": true,
+      "dominated": false,
+      "budget_feasible": true,
+      "utility": 0.42500000000000004
+    },
+    {
+      "id": "q4",
+      "text": "Can the campus become completely energy-self-sufficient throughout the year without grid electricity?",
+      "dc": 1.0,
+      "qc": 0.5,
+      "dc_raw": 24.0,
+      "qc_raw": 20.0,
+      "best_procedure": "declared",
+      "region": "III",
+      "frontier": false,
+      "dominated": true,
+      "budget_feasible": false,
+      "utility": 0.0
+    }
+  ],
+  "frontier": [
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "selected": [
+    {
+      "id": "q3",
+      "text": "Can occupancy, timetable, weather, and solar-generation data be combined to predict and automatically minimise campus electricity demand?",
+      "dc": 0.75,
+      "qc": 0.8,
+      "dc_raw": 18.0,
+      "qc_raw": 32.0,
+      "best_procedure": "D2",
+      "region": "IV",
+      "utility": 0.42500000000000004
+    }
+  ],
+  "thresholds": {
+    "dc": 0.65,
+    "qc": 0.65
+  },
+  "budget_beta": 0.8,
+  "utility_lambda": 0.5,
+  "distance_error_bound": 0.14142135623730953,
+  "geodesic": {
+    "path": [
+      "q1",
+      "q2",
+      "q4"
+    ],
+    "length": 0.8995358889227445
+  },
+  "limitations": [
+    "Operational anchors are declared conventions, not universal natural units.",
+    "Automated description-length estimators are proxies and require independent validation.",
+    "Coordinate proximity does not establish semantic identity, causation, or historical influence.",
+    "Final decisions require expert, ethical, feasibility, and empirical review."
+  ]
+}

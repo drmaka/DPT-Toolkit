@@ -1,0 +1,11 @@
+DPT Toolkit
+Copyright 2026 Mohammad Amir Khusru Akhtar
+
+This distribution includes an integration-ready subset of DiscoveryBench v1.1.0.
+OpenAlex-derived bibliographic metadata is provided under CC0 1.0 and should be
+attributed to OpenAlex. The DPT Toolkit code and original documentation are
+licensed under Apache License 2.0.
+
+Automated DC and QC estimators in this package are transparent operational
+proxies. They are not universal physical measurements and must not be represented
+as independently validated estimators unless validation is actually performed.

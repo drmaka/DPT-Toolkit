@@ -1,0 +1,5 @@
+id,text,dc,qc,dc_raw,qc_raw,best_procedure,region,frontier,dominated,budget_feasible,utility
+q1,Can replacing conventional bulbs with LED bulbs reduce university electricity consumption?,0.20833333333333334,0.125,5.0,5.0,declared,I,True,False,True,0.02083333333333333
+q2,Can timetable changes reduce the university's peak electricity demand?,0.5,0.375,12.0,15.0,declared,I,True,False,True,0.125
+q3,"Can occupancy, timetable, weather, and solar-generation data be combined to predict and automatically minimise campus electricity demand?",0.75,0.8,18.0,32.0,D2,IV,True,False,True,0.42500000000000004
+q4,Can the campus become completely energy-self-sufficient throughout the year without grid electricity?,1.0,0.5,24.0,20.0,declared,III,False,True,False,0.0
